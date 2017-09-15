@@ -23,9 +23,15 @@ for i in range(1,len(words)):
         l[j+1].append(j+1)
         l[j+1].append(1)
 #f = open('Q1.txt','w')
+count = 0 
 for i in l:
     k=' '.join([str(j) for j in i])
-    print (k)
+    if count < len(l)-1:
+        print (k)
+    else:
+        print (k,end="")
+        #print (count,len(l))
+    count +=1
     #f.write(k+"\n")
 #f.close()   
 

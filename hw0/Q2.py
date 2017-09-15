@@ -4,7 +4,7 @@ from PIL import Image
 testing_image = sys.argv[1]
 im = Image.open(testing_image)
 width,height = im.size
-output = Image.new('RGB',(width,height),'white')
+output = Image.new('RGB',(width,height))
 
 for x in range(width):
     for y in range(height):
