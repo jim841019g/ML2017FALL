@@ -43,18 +43,7 @@ def main():
     data = np.array(data,dtype=np.int)
     for i in range(raw_label.shape[0]):
         label[i][raw_label[i]]=1
-    #testing data
-    testing_data = 'test.csv'
-    raw_test = []
-    testcsv = csv.DictReader(open(testing_data,'r'),quoting=csv.QUOTE_NONE)
 
-    for row in testcsv:
-        raw_test.append(row)
-
-    test = []
-    for item in raw_test:
-        test.append(item['feature'].split(' '))
-    test = np.array(test,dtype=np.int)
     
     model = training(data,label,epoch)
     #testing(test,model,'answer.csv')
